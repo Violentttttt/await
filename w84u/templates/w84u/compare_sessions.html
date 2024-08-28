@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Sessions</title>
+</head>
+<body>
+    <h1>Compare Sessions</h1>
+
+    <!-- Форма с кнопкой -->
+    <form id="compareForm" method="POST" action="{% url 'compare_sessions' %}">
+        {% csrf_token %}
+        <label for="session1">Session 1 ID:</label>
+        <input type="text" id="session1" name="session1" required>
+        <br>
+        <label for="session2">Session 2 ID:</label>
+        <input type="text" id="session2" name="session2" required>
+        <br><br>
+        <button type="submit">Compare Sessions</button>
+    </form>
+
+    <!-- Блок для отображения результата -->
+    <div id="result">
+        {% if result %}
+            <p>Comparison Result: {{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

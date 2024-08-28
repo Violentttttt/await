@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Map</title>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    {% load static %}
+    <style>
+      #map {
+        width: 100%;
+        height: 900px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <button id="setRed">Установить красную метку</button>
+    <button id="setBlue">Установить синюю метку</button>
+    <button id="sendData">Отправить данные</button>
+    <script>
+      var redIconUrl = "{% static 'w84u/redicon.svg' %}";
+      var blueIconUrl = "{% static 'w84u/blueicon.svg' %}";
+      var map;
+      var myLocation;
+      var targetLocation;
+      var circle;
+      var currentMarkerType = null;
+
+      // Инициализация карты
+      DG.then(function () {
+        map = DG.map("map", {
+          center: [54.98, 82.89],
+          zoom: 13,
+        });
+
+        document
+          .getElementById("setRed")
+          .addEventListener("click", function () {
+            currentMarkerType = "red";
+          });
+
+        document
+          .getElementById("setBlue")
+          .addEventListener("click", function () {
+            currentMarkerType = "blue";
+          });
+
+        map.on("click", function (e) {
+          if (currentMarkerType === "red") {
+            if (myLocation) {
+              map.removeLayer(myLocation);
+            }
+            myLocation = DG.marker([e.latlng.lat, e.latlng.lng], {
+              icon: DG.icon({ iconUrl: redIconUrl, iconSize: [36, 36] }),
+            }).addTo(map);
+          } else if (currentMarkerType === "blue") {
+            if (targetLocation) {
+              map.removeLayer(targetLocation);
+              if (circle) {
+                map.removeLayer(circle);
+              }
+            }
+            targetLocation = DG.marker([e.latlng.lat, e.latlng.lng], {
+              icon: DG.icon({ iconUrl: blueIconUrl, iconSize: [36, 36] }),
+            }).addTo(map);
+            circle = DG.circle([e.latlng.lat, e.latlng.lng], 50, {
+              color: "blue",
+              fillColor: "#3366ff",
+              fill: true,
+              fillOpacity: 0.3,
+            }).addTo(map);
+          } else {
+            alert("Выберите режим установки метки.");
+          }
+        });
+      });
+
+      document
+        .getElementById("sendData")
+        .addEventListener("click", function () {
+          sendLocationData();
+        });
+
+      function sendLocationData() {
+        var redCoords = myLocation ? myLocation.getLatLng() : null;
+        var blueCoords = targetLocation ? targetLocation.getLatLng() : null;
+        var data = JSON.stringify({ red: redCoords, blue: blueCoords });
+
+        fetch("http://127.0.0.1:8000/map/save_locations/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: data,
+        })
+          .then((response) => response.json())
+          .then((data) => console.log("Данные успешно отправлены:", data))
+          .catch((error) =>
+            console.error("Ошибка при отправке данных:", error)
+          );
+      }
+    </script>
+  </body>
+</html>
