@@ -1,6 +1,7 @@
 # models.py
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.db.models.signals import post_save
 from django.utils import timezone
 from django.contrib.auth import get_user_model
 from django.contrib.postgres.fields import DateTimeRangeField
@@ -27,7 +28,7 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractBaseUser):
     email = models.EmailField(unique=True)
-    username = models.CharField(max_length=30, unique=True)
+    username = models.CharField(max_length=30)
     real_name = models.CharField(max_length=100)
     age = models.IntegerField(null=True, blank=True)
     gender = models.CharField(max_length=10, choices=(('men', 'Men'), ('women', 'Women')))
@@ -50,6 +51,9 @@ class CustomUser(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return self.is_superuser
+
+
+
 
 
 class OptionalInfo(models.Model):
@@ -102,10 +106,13 @@ class Message(models.Model):
 
 
 class MaybeMatch(models.Model):
-    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='maybe_matсhes_as_user_1')#тот , кого ищет пользователь
-    session_1 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='maybe_matches_as_session1')#сессия пользователя , в которой ищут первого юзера
+    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE,
+                               related_name='maybe_matсhes_as_user_1')  # тот , кого ищет пользователь
+    session_1 = models.ForeignKey('Session', on_delete=models.CASCADE,
+                                  related_name='maybe_matches_as_session1')  # сессия пользователя , в которой ищут первого юзера
     id_confirmed_by_user1 = models.BooleanField(default=False)
-    user_2 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='maybe_matches_as_user2')#пользователь
+    user_2 = models.ForeignKey(CustomUser, on_delete=models.CASCADE,
+                               related_name='maybe_matches_as_user2')  # пользователь
     session_2 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='maybe_matches_as_session2')
     id_confirmed_by_user2 = models.BooleanField(default=False)
 
@@ -131,3 +138,9 @@ class Session(models.Model):
 
     def __str__(self):
         return f'{self.id},{self.name} ({self.date}),{self.datetime_range},{self.red_marker},{self.blue_marker}, {self.surname}'
+
+
+class Geo(models.Model):
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    location = gis_models.PointField()
+    recorded_at = models.DateTimeField(default=timezone.now)

@@ -1,21 +1,20 @@
-import math
-from datetime import datetime
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render, redirect, get_object_or_404
-from w84u.forms import UserRegistrationForm, LoginForm
+import traceback
+from django.utils import timezone
+from datetime import datetime, timedelta
+from rest_framework.exceptions import AuthenticationFailed
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework_simplejwt.views import TokenViewBase
+from rest_framework_simplejwt.exceptions import InvalidToken
 from django.contrib.auth import authenticate, login, logout
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_http_methods
-from django.http import HttpResponse
-import json
-from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import viewsets, status, generics
+from .authentication import CookieJWTAuthentication
 from .models import CustomUser, Marker, MarkerHistory, Match, Message, Session, OptionalInfo, MaybeMatch
 from .serializers import CustomUserSerializer, MarkerSerializer, MarkerHistorySerializer, MatchSerializer, \
-    MessageSerializer, SessionSerializer, OptionalInfoSerializer, MaybeMatchSerializer
+    MessageSerializer, SessionSerializer, OptionalInfoSerializer, MaybeMatchSerializer, HistorySerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.conf import settings
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.authentication import TokenAuthentication
 from django.views import View
@@ -31,109 +30,141 @@ from django.contrib.gis.geos import Point
 from django_filters.rest_framework import DjangoFilterBackend
 from django.contrib.gis.geos import GEOSGeometry
 from geopy.distance import geodesic
-
 from .services import handle_session_save
 
 
-# Create your views here.
-def main(request):
-    context = {}
+class RegisterAPIView(APIView):
+    def post(self, request):
 
-    return render(request, 'w84u/main.html', context)
+        print(request.data)
+        username = request.data.get('username')
+        email = request.data.get('email')
+        real_name = request.data.get('real_name')
+        gender = request.data.get("gender")
+        age = request.data.get('age')
+        password = request.data.get('password')
+
+        # Checking if username or email already exists
+
+        if CustomUser.objects.filter(email=email).exists():
+            return Response({"error": "User with this email already exists."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # Creating the user
+            user = CustomUser.objects.create_user(
+                username=username,
+                email=email,
+                password=password,
+                real_name=real_name,
+                gender=gender,
+                age=age
+            )
+
+            # Generating JWT tokens
+            refresh = RefreshToken.for_user(user)
+
+            # Creating a response with tokens and setting the access_token in cookies
+            response = Response({"message": "User created successfully."}, status=status.HTTP_201_CREATED)
+            response.set_cookie(
+                key='access_token',
+                value=str(refresh.access_token),
+                httponly=True,
+
+            )
+            print(response.set_cookie)
+            return response
+        except Exception as ex:
+            print(f"Error during registration: {ex}")
+            return Response({"error": str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-def register(request):
-    if request.method == 'POST':
-        user_form = UserRegistrationForm(request.POST)
-        if user_form.is_valid():
-            new_user = user_form.save(commit=False)
-            new_user.set_password(user_form.cleaned_data['password'])
-            new_user.username = new_user.email
-            new_user.save()
-            return redirect('/login/')
-    else:
-        user_form = UserRegistrationForm()
-    return render(request, 'w84u/register.html', {'user_form': user_form})
+class LoginAPIView(APIView):
+
+    def post(self, request, *args, **kwargs):
+
+        email = request.data.get('email')
+        password = request.data.get('password')
+
+        try:
+            user = CustomUser.objects.get(email=email)
+        except CustomUser.DoesNotExist:
+            return Response({'error': 'Invalid credentials'}, status=400)
+
+        user = authenticate(username=user.email, password=password)
+
+        if user:
+            refresh = RefreshToken.for_user(user)
+            response = Response()
+
+            response.set_cookie(
+                key='access_token',
+                value=str(refresh.access_token),
+                httponly=True,  # Кука будет доступна только серверу
+                samesite=None,
+                max_age=settings.SIMPLE_JWT['ACCESS_TOKEN_LIFETIME'].total_seconds()
+            )
+            response.set_cookie(
+                key='refresh_token',
+                value=str(refresh),
+                httponly=True,
+                samesite=None,
+                max_age=settings.SIMPLE_JWT['REFRESH_TOKEN_LIFETIME'].total_seconds()
+            )
+
+            print(response.cookies)
+            response.data = {"message": "Logged in successfully"}
+            return response
+
+        return Response({'error': 'Invalid credentials'}, status=400)
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            return Response({"message": "User is authenticated", "user": request.user.username},
+                            status=status.HTTP_200_OK)
+        else:
+            return Response({"error": "User is not authenticated"}, status=status.HTTP_401_UNAUTHORIZED)
 
 
+class LogoutAPIView(APIView):
+
+    def post(self, request):
+        response = Response({"message": "Logged out successfully"}, status=status.HTTP_200_OK)
+        response.delete_cookie('access_token', path='/')
+        response.delete_cookie('refresh_token', path='/')
+
+        return response
+
+
+# Функция для генерации токена для ws
 def get_user_token(user):
     token, created = Token.objects.get_or_create(user=user)
+
+    if not created:
+
+        if token.created < timezone.now() - timedelta(days=1):
+            token.delete()
+            token = Token.objects.create(user=user)
+
     return token.key
 
 
-def user_login(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
-            user = CustomUser.objects.filter(email=email).first()
-            if user:
-                user = authenticate(request, username=user.username, password=password)
-                if user is not None:
-                    if user.is_active:
-                        login(request, user)
-                        print("User authenticated and logged in successfully")
-                        token = get_user_token(user)
-                        response = redirect(f'http://localhost:3000/account?token={token}')
-                        print(response.status_code)  # Должно быть 302
-                        return response
-                    else:
-                        print("User account is disabled")
-                        return render(request, 'w84u/login.html',
-                                      {'form': form, 'error_message': 'Your account is disabled.'})
-                else:
-                    print("Invalid login attempt")
-                    return render(request, 'w84u/login.html', {'form': form, 'error_message': 'Invalid login attempt.'})
-            else:
-                print("User not found")
-                return render(request, 'w84u/login.html', {'form': form, 'error_message': 'Invalid login attempt.'})
-        else:
-            print("Form is not valid")
-    else:
-        form = LoginForm()
-    return render(request, 'w84u/login.html', {'form': form})
-
-
-def logout_user(request):
-    logout(request)
-    return redirect('/')
-
-
-def map_view(request):
-    return render(request, 'w84u/W4U.html', {})
-
-
 class Save_infoView(APIView):
+    permission_classes = [IsAuthenticated]
     parser_classes = (MultiPartParser, FormParser)
 
     def post(self, request):
         try:
-            # Извлечение токена из заголовка запроса
-            auth_header = request.headers.get('Authorization')
-            if auth_header:
-                token_key = auth_header.split(' ')[1]  # Предполагаем формат 'Token <token>'
-                try:
-                    token = Token.objects.get(key=token_key)
-                    user = token.user
-                except Token.DoesNotExist:
-                    return Response({"error": "Invalid token"}, status=status.HTTP_401_UNAUTHORIZED)
-            else:
-                return Response({"error": "Token not provided"}, status=status.HTTP_401_UNAUTHORIZED)
+            user = request.user
 
-            # Копируем данные запроса в изменяемый словарь
             data = request.data.copy()
             data['user'] = user.id
 
             # Получаем маркеры
-            red_marker_id = request.data.get('savedRedMarkerId')
-            blue_marker_id = request.data.get('savedBlueMarkerId')
+            red_marker_id = request.COOKIES.get('red_marker_id')
+            blue_marker_id = request.COOKIES.get('blue_marker_id')
+
             red_marker = Marker.objects.filter(id=red_marker_id).first()
             blue_marker = Marker.objects.filter(id=blue_marker_id).first()
-            if red_marker_id and not red_marker:
-                return Response({"error": "Red marker not found"}, status=status.HTTP_400_BAD_REQUEST)
-            if blue_marker_id and not blue_marker:
-                return Response({"error": "Blue marker not found"}, status=status.HTTP_400_BAD_REQUEST)
 
             print("Request data:", request.data)
 
@@ -164,10 +195,11 @@ class Save_infoView(APIView):
                         datetime_range=None,
                         surname=data.get('surname'),
                         more_info=data.get('more_info'),
-                        image=request.FILES.get('photo')
+                        image=request.FILES.get('photo'),
+                        is_active=True,
                     )
                 elif datetime_range:
-                    post_new = serializer.save(
+                    post_new = Session.objects.create(
                         user=user,
                         red_marker=red_marker,
                         blue_marker=blue_marker,
@@ -177,8 +209,22 @@ class Save_infoView(APIView):
                         datetime_range=datetime_range,
                         surname=data.get('surname'),
                         more_info=data.get('more_info'),
-                        image=request.FILES.get('photo')
+                        image=request.FILES.get('photo'),
+                        is_active=True,
                     )
+                    # post_new = serializer.save(
+                    #     user=user,
+                    #     red_marker=red_marker,
+                    #     blue_marker=blue_marker,
+                    #     name=data.get('name'),
+                    #     gender=data.get('gender'),
+                    #     date=None,
+                    #     datetime_range=datetime_range,
+                    #     surname=data.get('surname'),
+                    #     more_info=data.get('more_info'),
+                    #     image=request.FILES.get('photo')
+                    # )
+
                 else:
                     return Response({"error": "Neither single datetime nor range provided"},
                                     status=status.HTTP_400_BAD_REQUEST)
@@ -189,11 +235,14 @@ class Save_infoView(APIView):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         except Exception as e:
+            traceback.print_exc()
             print("Error occurred:", str(e))
             return Response({"error": "An unexpected error occurred."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class SaveLocationsView(APIView):
+    permission_classes = [IsAuthenticated]
+
     def post(self, request):
         try:
             data = request.data
@@ -204,9 +253,9 @@ class SaveLocationsView(APIView):
             if not user.is_authenticated:
                 return Response({"error": "User not authenticated"}, status=status.HTTP_401_UNAUTHORIZED)
 
-            response_data = {}
+            response = Response()
 
-            if red_location:
+            if red_location and blue_location:
                 red_marker_data = {
                     'user': user.id,
                     'latitude': red_location['lat'],
@@ -214,14 +263,6 @@ class SaveLocationsView(APIView):
                     'type': 'red',
                     'created_at': datetime.now()
                 }
-                red_marker_serializer = MarkerSerializer(data=red_marker_data)
-                if red_marker_serializer.is_valid():
-                    red_marker = red_marker_serializer.save()
-                    response_data['red_marker_id'] = red_marker.id
-                else:
-                    return Response(red_marker_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-            if blue_location:
                 blue_marker_data = {
                     'user': user.id,
                     'latitude': blue_location['lat'],
@@ -229,27 +270,30 @@ class SaveLocationsView(APIView):
                     'type': 'blue',
                     'created_at': datetime.now()
                 }
+                red_marker_serializer = MarkerSerializer(data=red_marker_data)
                 blue_marker_serializer = MarkerSerializer(data=blue_marker_data)
-                if blue_marker_serializer.is_valid():
-                    blue_marker = blue_marker_serializer.save()
-                    response_data['blue_marker_id'] = blue_marker.id
-                else:
-                    return Response(blue_marker_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-            return Response({"status": "success", "msg": "Coordinates saved", "data": response_data},
-                            status=status.HTTP_200_OK)
+                if red_marker_serializer.is_valid() and blue_marker_serializer.is_valid():
+                    red_marker = red_marker_serializer.save()
+                    blue_marker = blue_marker_serializer.save()
+                    print('данные сохранились')
+                    response.set_cookie(
+                        key='blue_marker_id',
+                        value=str(blue_marker.id),
+                        httponly=True,
+
+                    )
+                    response.set_cookie(
+                        key='red_marker_id',
+                        value=str(red_marker.id),
+                        httponly=True,
+                    )
+                    print('куки установлены')
+                    return response
+
+            return Response({"status": "success", "msg": "Coordinates saved"})
         except Exception as e:
             return Response({"status": "error", "msg": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-class WorldView(APIView): #мусор ебаный
-
-    def get(self, request):
-        # Здесь можете добавить логику получения данных, которые будут возвращены
-        data = {
-            "message": "Hello from Django"
-        }
-        return Response(data, status=status.HTTP_200_OK)
 
 
 class AccountView(APIView):  # класс загрузки данных из таблицы CustomUser
@@ -257,12 +301,20 @@ class AccountView(APIView):  # класс загрузки данных из т�
 
     def get(self, request):
         try:
+            response = Response()
+            if request.COOKIES.get('blue_marker_id'):
+                response.delete_cookie('blue_marker_id', path='/')
+
+            if request.COOKIES.get('red_marker_id'):
+                response.delete_cookie('red_marker_id', path='/')
             info = request.user
+
         except CustomUser.DoesNotExist:
             return Response({"detail": "Информация не найдена"}, status=status.HTTP_404_NOT_FOUND)
 
         serializer = CustomUserSerializer(info)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        response.data = serializer.data
+        return response
 
 
 class OptionalInfoView(APIView):
@@ -289,71 +341,6 @@ class OptionalInfoView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-
-
-class TimeCompare(View):
-    def get(self, request, pk):
-        try:
-            # Получаем последнюю сессию пользователя
-            exclude_session = Session.objects.filter(user=pk).latest('created_at')
-            print(exclude_session.date)
-            print(exclude_session.datetime_range)
-
-        except Session.DoesNotExist:
-            return HttpResponse('Сессия не найдена', status=404)
-
-        filtered = Session.objects.none()
-
-        if exclude_session.date != None:
-            filtered = Session.objects.filter(
-                Q(datetime_range__contains=exclude_session.date) | Q(date=exclude_session.date))
-        elif exclude_session.datetime_range != None:
-            filtered = Session.objects.filter(Q(datetime_range__overlap=exclude_session.datetime_range) | Q(
-                datetime_range=exclude_session.datetime_range))
-
-        filtered_sessions = filtered.filter(
-            # is_active=True
-        ).exclude(pk=exclude_session.pk)
-        print(filtered_sessions)
-
-        return HttpResponse(f'Отфильтрованные по времени сессии: {filtered_sessions}')
-
-
-class GeoCompare(View):
-    def get(self, request, pk):
-        try:
-            exclude_session = Session.objects.filter(user=pk).latest('created_at')
-
-            blue_marker = exclude_session.blue_marker
-            red_marker = exclude_session.red_marker
-
-        except Session.DoesNotExist:
-            return HttpResponse('Сессия не найдена', status=404)
-
-        if blue_marker and red_marker:
-            radius_km = 0.05  # 50 метров
-
-            blue_point = GEOSGeometry(blue_marker.location)
-            red_point = GEOSGeometry(red_marker.location)
-
-            print("Blue point:", blue_point)
-            print("Red point:", red_point)
-
-            filtered_sessions = Session.objects.annotate(
-                distance_blue=Distance('blue_marker__location', red_point),
-                distance_red=Distance('red_marker__location', blue_point)
-            ).filter(
-                distance_blue__lte=D(km=radius_km),
-                distance_red__lte=D(km=radius_km)
-            ).exclude(pk=exclude_session.pk)
-
-            print("Filtered sessions:", filtered_sessions)
-            session_ids = [session.pk for session in filtered_sessions]
-            return HttpResponse(f'Результаты фильтрации: {session_ids}')
-        else:
-            return HttpResponse('Не найдено достаточного количества маркеров', status=404)
 
 
 class MaybeMatchAPIView(APIView):
@@ -409,8 +396,8 @@ class MaybeMatchAPIView(APIView):
                 match.delete()
 
             data = {
-                'count': len(matches_data),
-                'matches': matches_data,
+                'count': count,  # Количество найденных матчей
+                'matches': matches_data,  # Сами матчи
             }
 
         else:
@@ -447,7 +434,10 @@ class MaybeMatchAPIView(APIView):
             print("Error occurred:", str(e))
             return Response({"error": "An unexpected error occurred."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
 class MatchView(APIView):
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
         maybematches = MaybeMatch.objects.filter(
             (Q(user_1=request.user) | Q(user_2=request.user)) &
@@ -485,9 +475,32 @@ class MatchView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         else:
-            return Response({'detail': 'No matches found'}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'detail': 'No matches found'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class HistoryAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        ses = Session.objects.filter(user=request.user, is_active=True)
+        serializer = HistorySerializer(ses, many=True)
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class WSAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        acs = request.COOKIES.get('access_token')
+        ws_token = get_user_token(request.user)
+        response = Response()
+        response.data = ws_token
+        return response
+
 
 """API к бд"""
+
 
 class CustomUserViewSet(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
@@ -514,9 +527,12 @@ class MarkerHistoryViewSet(viewsets.ModelViewSet):
     serializer_class = MarkerHistorySerializer
     # permission_classes = [IsAdminUser, ]
 
+
 class MaybeMatchViewSet(viewsets.ModelViewSet):
     queryset = MaybeMatch.objects.all()
     serializer_class = MaybeMatchSerializer
+
+
 class MatchViewSet(viewsets.ModelViewSet):
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
@@ -534,4 +550,71 @@ class MessageViewSet(viewsets.ModelViewSet):
 class SessionViewSet(viewsets.ModelViewSet):
     queryset = Session.objects.all()
     serializer_class = SessionSerializer
+
+
 #     permission_classes = [IsAdminUser, ]
+
+
+# class TokenVerifyView(APIView):
+#     authentication_classes = [CookieJWTAuthentication]
+#
+#     def post(self, request):
+#         return Response({"detail": "Token is valid."}, status=status.HTTP_200_OK)
+
+
+class CustomTokenRefreshView(TokenViewBase):
+
+    def post(self, request, *args, **kwargs):
+        refresh_token = request.COOKIES.get('refresh_token')
+
+        if not refresh_token:
+            return Response({"detail": "Refresh token not found in cookies."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # Создаем новый access токен
+            refresh = RefreshToken(refresh_token)
+            new_access_token = str(refresh.access_token)
+
+            response = Response({"access": new_access_token}, status=status.HTTP_200_OK)
+            response.set_cookie(
+                key='access_token',
+                value=new_access_token,
+                httponly=True,
+                secure=False,  # Установите True для HTTPS
+                samesite='None',
+                max_age=settings.SIMPLE_JWT['ACCESS_TOKEN_LIFETIME'].total_seconds()
+            )
+            return response
+
+        except InvalidToken:
+            return Response({"detail": "Invalid refresh token."}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+class Verify_for_app(APIView):
+    authentication_classes = [JWTAuthentication]
+
+    def post(self, request):
+        # print(request.COOKIES)
+        access_token = request.COOKIES.get('access_token')
+
+        if not access_token:
+            return Response({"detail": "Access token is missing."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            jwt_authenticator = JWTAuthentication()
+            request.META['HTTP_AUTHORIZATION'] = f'Bearer {access_token}'
+
+            # Попытка аутентификации пользователя
+            user, _ = jwt_authenticator.authenticate(request)
+
+            if user is None:
+                raise AuthenticationFailed("User not authenticated.")
+
+            # Если аутентификация успешна, возвращаем ответ с данными пользователя
+            return Response({"detail": "Authenticated", "user": user.email}, status=status.HTTP_200_OK)
+
+        except AuthenticationFailed as e:
+            return Response({"detail": str(e)}, status=status.HTTP_401_UNAUTHORIZED)
+
+        except Exception as e:
+            return Response({"detail": "An error occurred."}, status=status.HTTP_400_BAD_REQUEST)

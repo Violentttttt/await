@@ -33,6 +33,22 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
@@ -338,6 +354,239 @@
         "documentation": {}
     },
     {
+        "label": "pytz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytz",
+        "description": "pytz",
+        "detail": "pytz",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "Marker",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "OptionalInfo",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "Marker",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "MarkerHistory",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "Match",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "OptionalInfo",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "MaybeMatch",
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "isExtraImport": true,
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "IntegrityError",
+        "importPath": "django.db.utils",
+        "description": "django.db.utils",
+        "isExtraImport": true,
+        "detail": "django.db.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "GEOSGeometry",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "GEOSGeometry",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "DateTimeTZRange",
+        "importPath": "psycopg2.extras",
+        "description": "psycopg2.extras",
+        "isExtraImport": true,
+        "detail": "psycopg2.extras",
+        "documentation": {}
+    },
+    {
+        "label": "DateTimeRange",
+        "importPath": "psycopg2.extras",
+        "description": "psycopg2.extras",
+        "isExtraImport": true,
+        "detail": "psycopg2.extras",
+        "documentation": {}
+    },
+    {
+        "label": "DateTimeRange",
+        "importPath": "psycopg2.extras",
+        "description": "psycopg2.extras",
+        "isExtraImport": true,
+        "detail": "psycopg2.extras",
+        "documentation": {}
+    },
+    {
+        "label": "DateTimeTZRange",
+        "importPath": "psycopg2.extras",
+        "description": "psycopg2.extras",
+        "isExtraImport": true,
+        "detail": "psycopg2.extras",
+        "documentation": {}
+    },
+    {
+        "label": "DateTimeRange",
+        "importPath": "psycopg2.extras",
+        "description": "psycopg2.extras",
+        "isExtraImport": true,
+        "detail": "psycopg2.extras",
+        "documentation": {}
+    },
+    {
         "label": "django.contrib.auth.models",
         "kind": 6,
         "isExtraImport": true,
@@ -500,7 +749,231 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -542,68 +1015,77 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.postgres.fields.ranges",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.postgres.fields.ranges",
+        "description": "django.contrib.postgres.fields.ranges",
+        "detail": "django.contrib.postgres.fields.ranges",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.gis.db.models.fields",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.gis.db.models.fields",
+        "description": "django.contrib.gis.db.models.fields",
+        "detail": "django.contrib.gis.db.models.fields",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "require_http_methods",
-        "importPath": "django.views.decorators.http",
-        "description": "django.views.decorators.http",
-        "isExtraImport": true,
-        "detail": "django.views.decorators.http",
-        "documentation": {}
-    },
-    {
-        "label": "require_http_methods",
-        "importPath": "django.views.decorators.http",
-        "description": "django.views.decorators.http",
-        "isExtraImport": true,
-        "detail": "django.views.decorators.http",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "csrf_exempt",
-        "importPath": "django.views.decorators.csrf",
-        "description": "django.views.decorators.csrf",
-        "isExtraImport": true,
-        "detail": "django.views.decorators.csrf",
-        "documentation": {}
-    },
-    {
-        "label": "csrf_exempt",
-        "importPath": "django.views.decorators.csrf",
-        "description": "django.views.decorators.csrf",
-        "isExtraImport": true,
-        "detail": "django.views.decorators.csrf",
         "documentation": {}
     },
     {
@@ -655,11 +1137,11 @@
         "documentation": {}
     },
     {
-        "label": "timezone",
-        "importPath": "django.utils",
-        "description": "django.utils",
+        "label": "ObjectDoesNotExist",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
         "isExtraImport": true,
-        "detail": "django.utils",
+        "detail": "django.core.exceptions",
         "documentation": {}
     },
     {
@@ -695,6 +1177,30 @@
         "documentation": {}
     },
     {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "DateTimeRangeField",
+        "importPath": "django.contrib.postgres.fields",
+        "description": "django.contrib.postgres.fields",
+        "isExtraImport": true,
+        "detail": "django.contrib.postgres.fields",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.contrib.gis.db",
+        "description": "django.contrib.gis.db",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.db",
+        "documentation": {}
+    },
+    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -719,51 +1225,147 @@
         "documentation": {}
     },
     {
-        "label": "CustomUser",
-        "importPath": "w84u.models",
-        "description": "w84u.models",
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "w84u.models",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
-        "label": "Marker",
-        "importPath": "w84u.models",
-        "description": "w84u.models",
+        "label": "generics",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "w84u.models",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
-        "label": "MarkerHistory",
-        "importPath": "w84u.models",
-        "description": "w84u.models",
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
         "isExtraImport": true,
-        "detail": "w84u.models",
+        "detail": "django.db.models.signals",
         "documentation": {}
     },
     {
-        "label": "Match",
-        "importPath": "w84u.models",
-        "description": "w84u.models",
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
         "isExtraImport": true,
-        "detail": "w84u.models",
+        "detail": "django.dispatch",
         "documentation": {}
     },
     {
-        "label": "Message",
-        "importPath": "w84u.models",
-        "description": "w84u.models",
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
         "isExtraImport": true,
-        "detail": "w84u.models",
+        "detail": "django.http",
         "documentation": {}
     },
     {
-        "label": "Session",
-        "importPath": "w84u.models",
-        "description": "w84u.models",
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
         "isExtraImport": true,
-        "detail": "w84u.models",
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "parse_datetime",
+        "importPath": "django.utils.dateparse",
+        "description": "django.utils.dateparse",
+        "isExtraImport": true,
+        "detail": "django.utils.dateparse",
+        "documentation": {}
+    },
+    {
+        "label": "parse_datetime",
+        "importPath": "django.utils.dateparse",
+        "description": "django.utils.dateparse",
+        "isExtraImport": true,
+        "detail": "django.utils.dateparse",
+        "documentation": {}
+    },
+    {
+        "label": "parse_datetime",
+        "importPath": "django.utils.dateparse",
+        "description": "django.utils.dateparse",
+        "isExtraImport": true,
+        "detail": "django.utils.dateparse",
+        "documentation": {}
+    },
+    {
+        "label": "D",
+        "importPath": "django.contrib.gis.measure",
+        "description": "django.contrib.gis.measure",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.measure",
+        "documentation": {}
+    },
+    {
+        "label": "D",
+        "importPath": "django.contrib.gis.measure",
+        "description": "django.contrib.gis.measure",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.measure",
+        "documentation": {}
+    },
+    {
+        "label": "Distance",
+        "importPath": "django.contrib.gis.db.models.functions",
+        "description": "django.contrib.gis.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "Distance",
+        "importPath": "django.contrib.gis.db.models.functions",
+        "description": "django.contrib.gis.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.db.models.functions",
         "documentation": {}
     },
     {
@@ -775,11 +1377,27 @@
         "documentation": {}
     },
     {
+        "label": "parser",
+        "importPath": "dateutil",
+        "description": "dateutil",
+        "isExtraImport": true,
+        "detail": "dateutil",
+        "documentation": {}
+    },
+    {
         "label": "DefaultRouter",
         "importPath": "rest_framework.routers",
         "description": "rest_framework.routers",
         "isExtraImport": true,
         "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
         "documentation": {}
     },
     {
@@ -807,6 +1425,23 @@
         "documentation": {}
     },
     {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequiredMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -816,6 +1451,14 @@
     },
     {
         "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -839,6 +1482,31 @@
         "documentation": {}
     },
     {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "require_http_methods",
+        "importPath": "django.views.decorators.http",
+        "description": "django.views.decorators.http",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.http",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "APIView",
         "importPath": "rest_framework.views",
         "description": "rest_framework.views",
@@ -852,6 +1520,14 @@
         "description": "rest_framework.response",
         "isExtraImport": true,
         "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshToken",
+        "importPath": "rest_framework_simplejwt.tokens",
+        "description": "rest_framework_simplejwt.tokens",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.tokens",
         "documentation": {}
     },
     {
@@ -871,38 +1547,75 @@
         "documentation": {}
     },
     {
-        "label": "math",
-        "kind": 6,
+        "label": "TokenAuthentication",
+        "importPath": "rest_framework.authentication",
+        "description": "rest_framework.authentication",
         "isExtraImport": true,
-        "importPath": "math",
-        "description": "math",
-        "detail": "math",
+        "detail": "rest_framework.authentication",
         "documentation": {}
     },
     {
-        "label": "numpy",
-        "kind": 6,
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
         "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
+        "detail": "django.views",
         "documentation": {}
     },
     {
-        "label": "face_recognition",
-        "kind": 6,
+        "label": "Token",
+        "importPath": "rest_framework.authtoken.models",
+        "description": "rest_framework.authtoken.models",
         "isExtraImport": true,
-        "importPath": "face_recognition",
-        "description": "face_recognition",
-        "detail": "face_recognition",
+        "detail": "rest_framework.authtoken.models",
         "documentation": {}
     },
     {
-        "label": "pipeline",
-        "importPath": "transformers",
-        "description": "transformers",
+        "label": "MultiPartParser",
+        "importPath": "rest_framework.parsers",
+        "description": "rest_framework.parsers",
         "isExtraImport": true,
-        "detail": "transformers",
+        "detail": "rest_framework.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "FormParser",
+        "importPath": "rest_framework.parsers",
+        "description": "rest_framework.parsers",
+        "isExtraImport": true,
+        "detail": "rest_framework.parsers",
+        "documentation": {}
+    },
+    {
+        "label": "combine_date_time",
+        "importPath": "w84u.timeCompare",
+        "description": "w84u.timeCompare",
+        "isExtraImport": true,
+        "detail": "w84u.timeCompare",
+        "documentation": {}
+    },
+    {
+        "label": "create_datetime_range",
+        "importPath": "w84u.timeCompare",
+        "description": "w84u.timeCompare",
+        "isExtraImport": true,
+        "detail": "w84u.timeCompare",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoFilterBackend",
+        "importPath": "django_filters.rest_framework",
+        "description": "django_filters.rest_framework",
+        "isExtraImport": true,
+        "detail": "django_filters.rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "geodesic",
+        "importPath": "geopy.distance",
+        "description": "geopy.distance",
+        "isExtraImport": true,
+        "detail": "geopy.distance",
         "documentation": {}
     },
     {
@@ -1048,7 +1761,16 @@
         "kind": 5,
         "importPath": "Waiting_for_u.settings",
         "description": "Waiting_for_u.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    \"http://localhost:3000\",\n    \"http://127.0.0.1:3000\",\n]\nROOT_URLCONF = 'Waiting_for_u.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    \"http://localhost:3000\",\n    \"http://127.0.0.1:3000\",\n]\nCORS_ALLOW_CREDENTIALS = True\nROOT_URLCONF = 'Waiting_for_u.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],",
+        "detail": "Waiting_for_u.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_CREDENTIALS",
+        "kind": 5,
+        "importPath": "Waiting_for_u.settings",
+        "description": "Waiting_for_u.settings",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nROOT_URLCONF = 'Waiting_for_u.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
         "detail": "Waiting_for_u.settings",
         "documentation": {}
     },
@@ -1075,7 +1797,7 @@
         "kind": 5,
         "importPath": "Waiting_for_u.settings",
         "description": "Waiting_for_u.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'Waiting_for_u.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'w4udatabase',\n        'USER': 'postgres',\n        'PASSWORD': '12385279',\n        'HOST': '89.23.97.213',",
+        "peekOfCode": "WSGI_APPLICATION = 'Waiting_for_u.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.contrib.gis.db.backends.postgis',\n        'NAME': 'w4u',\n        'USER': 'postgres',\n        'PASSWORD': '12385279',\n        'HOST': '89.23.97.213',",
         "detail": "Waiting_for_u.settings",
         "documentation": {}
     },
@@ -1084,7 +1806,7 @@
         "kind": 5,
         "importPath": "Waiting_for_u.settings",
         "description": "Waiting_for_u.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'w4udatabase',\n        'USER': 'postgres',\n        'PASSWORD': '12385279',\n        'HOST': '89.23.97.213',\n        'PORT': '5432',\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.contrib.gis.db.backends.postgis',\n        'NAME': 'w4u',\n        'USER': 'postgres',\n        'PASSWORD': '12385279',\n        'HOST': '89.23.97.213',\n        'PORT': '5432',\n    }\n}",
         "detail": "Waiting_for_u.settings",
         "documentation": {}
     },
@@ -1156,7 +1878,7 @@
         "kind": 5,
         "importPath": "Waiting_for_u.settings",
         "description": "Waiting_for_u.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'DEFAULT_RENDERER_CLASSES': [\n        'rest_framework.renderers.JSONRenderer' ,\n        'rest_framework.renderers.BrowsableAPIRenderer' ,\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'DEFAULT_RENDERER_CLASSES': [\n        'rest_framework.renderers.JSONRenderer' ,\n        'rest_framework.renderers.BrowsableAPIRenderer' ,\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.AllowAny',\n    ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [",
         "detail": "Waiting_for_u.settings",
         "documentation": {}
     },
@@ -1165,7 +1887,7 @@
         "kind": 5,
         "importPath": "Waiting_for_u.settings",
         "description": "Waiting_for_u.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_RENDERER_CLASSES': [\n        'rest_framework.renderers.JSONRenderer' ,\n        'rest_framework.renderers.BrowsableAPIRenderer' ,\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.BasicAuthentication', ",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_RENDERER_CLASSES': [\n        'rest_framework.renderers.JSONRenderer' ,\n        'rest_framework.renderers.BrowsableAPIRenderer' ,\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.AllowAny',\n    ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.TokenAuthentication',",
         "detail": "Waiting_for_u.settings",
         "documentation": {}
     },
@@ -1175,6 +1897,24 @@
         "importPath": "Waiting_for_u.settings",
         "description": "Waiting_for_u.settings",
         "peekOfCode": "SIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": False,\n    \"BLACKLIST_AFTER_ROTATION\": False,\n    \"UPDATE_LAST_LOGIN\": False,\n    \"ALGORITHM\": \"HS256\",\n    \"SIGNING_KEY\": SECRET_KEY,\n    \"VERIFYING_KEY\": \"\",\n    \"AUDIENCE\": None,",
+        "detail": "Waiting_for_u.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "Waiting_for_u.settings",
+        "description": "Waiting_for_u.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# GDAL_LIBRARY_PATH = os.getenv('GDAL_LIBRARY_PATH', '/usr/local/lib/libgdal.so')",
+        "detail": "Waiting_for_u.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "Waiting_for_u.settings",
+        "description": "Waiting_for_u.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')\n# GDAL_LIBRARY_PATH = os.getenv('GDAL_LIBRARY_PATH', '/usr/local/lib/libgdal.so')",
         "detail": "Waiting_for_u.settings",
         "documentation": {}
     },
@@ -1287,6 +2027,24 @@
         "documentation": {}
     },
     {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "w84u.management.commands.generate_fake_data",
+        "description": "w84u.management.commands.generate_fake_data",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Generate fake data for CustomUser, Marker, and Session'\n    def handle(self, *args, **kwargs):\n        # Очистка таблиц перед созданием новых данных\n        # CustomUser.objects.all().delete()\n        # Marker.objects.all().delete()\n        # Session.objects.all().delete()\n        # OptionalInfo.objects.all().delete()\n        usernames = set()\n        emails = set()",
+        "detail": "w84u.management.commands.generate_fake_data",
+        "documentation": {}
+    },
+    {
+        "label": "fake",
+        "kind": 5,
+        "importPath": "w84u.management.commands.generate_fake_data",
+        "description": "w84u.management.commands.generate_fake_data",
+        "peekOfCode": "fake = Faker()\nclass Command(BaseCommand):\n    help = 'Generate fake data for CustomUser, Marker, and Session'\n    def handle(self, *args, **kwargs):\n        # Очистка таблиц перед созданием новых данных\n        # CustomUser.objects.all().delete()\n        # Marker.objects.all().delete()\n        # Session.objects.all().delete()\n        # OptionalInfo.objects.all().delete()\n        usernames = set()",
+        "detail": "w84u.management.commands.generate_fake_data",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "w84u.migrations.0001_initial",
@@ -1359,6 +2117,159 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0009_session_data_session_data_range_begin_and_more",
+        "description": "w84u.migrations.0009_session_data_session_data_range_begin_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0008_session'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='session',\n            name='data',\n            field=models.DateTimeField(blank=True, null=True),\n        ),",
+        "detail": "w84u.migrations.0009_session_data_session_data_range_begin_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0010_rename_data_session_date_and_more",
+        "description": "w84u.migrations.0010_rename_data_session_date_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0009_session_data_session_data_range_begin_and_more'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='session',\n            old_name='data',\n            new_name='date',\n        ),",
+        "detail": "w84u.migrations.0010_rename_data_session_date_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0011_alter_session_date_range_begin",
+        "description": "w84u.migrations.0011_alter_session_date_range_begin",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0010_rename_data_session_date_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='session',\n            name='date_range_begin',\n            field=models.DateTimeField(blank=True, null=True),\n        ),",
+        "detail": "w84u.migrations.0011_alter_session_date_range_begin",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0012_alter_session_name",
+        "description": "w84u.migrations.0012_alter_session_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0011_alter_session_date_range_begin'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='session',\n            name='name',\n            field=models.CharField(blank=True, max_length=100, null=True),\n        ),",
+        "detail": "w84u.migrations.0012_alter_session_name",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0013_optionalinfo_customuser_more_info",
+        "description": "w84u.migrations.0013_optionalinfo_customuser_more_info",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0012_alter_session_name'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='OptionalInfo',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('image', models.ImageField(blank=True, null=True, upload_to='OptionalInfo_images/')),",
+        "detail": "w84u.migrations.0013_optionalinfo_customuser_more_info",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0014_alter_customuser_more_info_alter_optionalinfo_user",
+        "description": "w84u.migrations.0014_alter_customuser_more_info_alter_optionalinfo_user",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0013_optionalinfo_customuser_more_info'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='customuser',\n            name='more_info',\n            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='w84u.optionalinfo'),\n        ),",
+        "detail": "w84u.migrations.0014_alter_customuser_more_info_alter_optionalinfo_user",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0015_optionalinfo_surname",
+        "description": "w84u.migrations.0015_optionalinfo_surname",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0014_alter_customuser_more_info_alter_optionalinfo_user'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='optionalinfo',\n            name='surname',\n            field=models.CharField(blank=True, max_length=100, null=True),\n        ),",
+        "detail": "w84u.migrations.0015_optionalinfo_surname",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0016_session_is_active",
+        "description": "w84u.migrations.0016_session_is_active",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0015_optionalinfo_surname'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='session',\n            name='is_active',\n            field=models.BooleanField(default=False),\n        ),",
+        "detail": "w84u.migrations.0016_session_is_active",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0017_alter_session_is_active",
+        "description": "w84u.migrations.0017_alter_session_is_active",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0016_session_is_active'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='session',\n            name='is_active',\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "w84u.migrations.0017_alter_session_is_active",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0018_alter_session_time_alter_session_time_range_begin_and_more",
+        "description": "w84u.migrations.0018_alter_session_time_alter_session_time_range_begin_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0017_alter_session_is_active'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='session',\n            name='time',\n            field=models.TimeField(blank=True, null=True),\n        ),",
+        "detail": "w84u.migrations.0018_alter_session_time_alter_session_time_range_begin_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0019_remove_session_date_range_begin_and_more",
+        "description": "w84u.migrations.0019_remove_session_date_range_begin_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0018_alter_session_time_alter_session_time_range_begin_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='session',\n            name='date_range_begin',\n        ),\n        migrations.RemoveField(",
+        "detail": "w84u.migrations.0019_remove_session_date_range_begin_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0020_alter_marker_unique_together_marker_location_and_more",
+        "description": "w84u.migrations.0020_alter_marker_unique_together_marker_location_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0019_remove_session_date_range_begin_and_more'),\n    ]\n    operations = [\n        migrations.AlterUniqueTogether(\n            name='marker',\n            unique_together={('user', 'type')},\n        ),\n        migrations.AddField(",
+        "detail": "w84u.migrations.0020_alter_marker_unique_together_marker_location_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0021_alter_marker_unique_together",
+        "description": "w84u.migrations.0021_alter_marker_unique_together",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0020_alter_marker_unique_together_marker_location_and_more'),\n    ]\n    operations = [\n        migrations.AlterUniqueTogether(\n            name='marker',\n            unique_together=set(),\n        ),\n    ]",
+        "detail": "w84u.migrations.0021_alter_marker_unique_together",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0022_match_session_1_match_session_2_alter_match_user_1_and_more",
+        "description": "w84u.migrations.0022_match_session_1_match_session_2_alter_match_user_1_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0021_alter_marker_unique_together'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='match',\n            name='session_1',\n            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='matches_as_session1', to='w84u.session'),\n        ),",
+        "detail": "w84u.migrations.0022_match_session_1_match_session_2_alter_match_user_1_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0023_alter_maybematch_user_1",
+        "description": "w84u.migrations.0023_alter_maybematch_user_1",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0022_match_session_1_match_session_2_alter_match_user_1_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='maybematch',\n            name='user_1',\n            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='maybe_matсhes_as_user_1', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "w84u.migrations.0023_alter_maybematch_user_1",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "w84u.migrations.0024_alter_match_unique_together",
+        "description": "w84u.migrations.0024_alter_match_unique_together",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('w84u', '0023_alter_maybematch_user_1'),\n    ]\n    operations = [\n        migrations.AlterUniqueTogether(\n            name='match',\n            unique_together={('user_1', 'session_1', 'user_2', 'session_2')},\n        ),\n    ]",
+        "detail": "w84u.migrations.0024_alter_match_unique_together",
+        "documentation": {}
+    },
+    {
+        "label": "create_maybematch",
+        "kind": 2,
+        "importPath": "w84u.Comparator",
+        "description": "w84u.Comparator",
+        "peekOfCode": "def create_maybematch(user_1,session_1,user_2, session_2):\n    match = MaybeMatch.objects.create(\n       user_1=user_1,\n       session_1=session_1,\n        user_2=user_2,\n        session_2=session_2\n    )",
+        "detail": "w84u.Comparator",
+        "documentation": {}
+    },
+    {
         "label": "W84UConfig",
         "kind": 6,
         "importPath": "w84u.apps",
@@ -1368,11 +2279,20 @@
         "documentation": {}
     },
     {
-        "label": "save_locations",
-        "kind": 2,
+        "label": "comparator",
+        "kind": 5,
         "importPath": "w84u.chain",
         "description": "w84u.chain",
-        "peekOfCode": "def save_locations(request):\n    data = json.loads(request.body)\n    red_location = data.get('red')\n    blue_location = data.get('blue')\n    # Здесь можно добавить код для сохранения данных в базу данных или логику обработки\n    print(\"Координаты красной метки: \", red_location)\n    print(\"Координаты синей метки: \", blue_location)\n    return JsonResponse({\"status\": \"success\", \"msg\": \"Координаты успешно сохранены\"})",
+        "peekOfCode": "comparator = Comparator()\nlast_session = comparator.get_last_session(7)\nif isinstance(last_session, Session):\n    # Работайте с объектом Session\n    print(\"Last session:\", last_session)\nelse:\n    # Сообщение об ошибке\n    print(last_session)",
+        "detail": "w84u.chain",
+        "documentation": {}
+    },
+    {
+        "label": "last_session",
+        "kind": 5,
+        "importPath": "w84u.chain",
+        "description": "w84u.chain",
+        "peekOfCode": "last_session = comparator.get_last_session(7)\nif isinstance(last_session, Session):\n    # Работайте с объектом Session\n    print(\"Last session:\", last_session)\nelse:\n    # Сообщение об ошибке\n    print(last_session)",
         "detail": "w84u.chain",
         "documentation": {}
     },
@@ -1399,7 +2319,7 @@
         "kind": 6,
         "importPath": "w84u.models",
         "description": "w84u.models",
-        "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError('The Email field must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        return user\n    def create_superuser(self, email, password=None, **extra_fields):",
+        "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError('The Email field must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        OptionalInfo.objects.create(user=user)\n        return user",
         "detail": "w84u.models",
         "documentation": {}
     },
@@ -1413,11 +2333,20 @@
         "documentation": {}
     },
     {
+        "label": "OptionalInfo",
+        "kind": 6,
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "peekOfCode": "class OptionalInfo(models.Model):\n    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)\n    image = models.ImageField(upload_to='OptionalInfo_images/', null=True, blank=True)\n    surname = models.CharField(max_length=100, null=True, blank=True)\n    about = models.CharField(max_length=500, null=True, blank=True)\n    country = models.CharField(max_length=100, null=True, blank=True)\n    town = models.CharField(max_length=100, null=True, blank=True)\n    study = models.CharField(max_length=100, null=True, blank=True)\n    work = models.CharField(max_length=100, null=True, blank=True)\nclass Marker(models.Model):",
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
         "label": "Marker",
         "kind": 6,
         "importPath": "w84u.models",
         "description": "w84u.models",
-        "peekOfCode": "class Marker(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    latitude = models.FloatField()\n    longitude = models.FloatField()\n    type = models.CharField(max_length=10, choices=(('red', 'Red'), ('blue', 'Blue')))\n    created_at = models.DateTimeField(default=timezone.now)\nclass MarkerHistory(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    marker = models.ForeignKey(Marker, on_delete=models.CASCADE)\n    match = models.ForeignKey('Match', on_delete=models.CASCADE , default=1)",
+        "peekOfCode": "class Marker(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    location = gis_models.PointField()\n    type = models.CharField(max_length=10, choices=(('red', 'Red'), ('blue', 'Blue')))\n    created_at = models.DateTimeField(default=timezone.now)\n    # class Meta:\n    #     unique_together = ('user', 'type')\nclass MarkerHistory(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    marker = models.ForeignKey(Marker, on_delete=models.CASCADE)",
         "detail": "w84u.models",
         "documentation": {}
     },
@@ -1426,7 +2355,7 @@
         "kind": 6,
         "importPath": "w84u.models",
         "description": "w84u.models",
-        "peekOfCode": "class MarkerHistory(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    marker = models.ForeignKey(Marker, on_delete=models.CASCADE)\n    match = models.ForeignKey('Match', on_delete=models.CASCADE , default=1)\n    latitude = models.FloatField()\n    longitude = models.FloatField()\n    requested_at = models.DateTimeField(default=timezone.now)\nclass Match(models.Model):\n    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='match_user_1')\n    user_2 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='match_user_2')",
+        "peekOfCode": "class MarkerHistory(models.Model):\n    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    marker = models.ForeignKey(Marker, on_delete=models.CASCADE)\n    match = models.ForeignKey('Match', on_delete=models.CASCADE, default=1)\n    latitude = models.FloatField()\n    longitude = models.FloatField()\n    requested_at = models.DateTimeField(default=timezone.now)\nclass Match(models.Model):\n    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='matches_as_user1')\n    session_1 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='matches_as_session1', null=True)",
         "detail": "w84u.models",
         "documentation": {}
     },
@@ -1435,7 +2364,7 @@
         "kind": 6,
         "importPath": "w84u.models",
         "description": "w84u.models",
-        "peekOfCode": "class Match(models.Model):\n    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='match_user_1')\n    user_2 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='match_user_2')\n    created_at = models.DateTimeField(default=timezone.now)\nclass Message(models.Model):\n    match = models.ForeignKey(Match, on_delete=models.CASCADE)\n    sender = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    content = models.TextField()\n    timestamp = models.DateTimeField(default=timezone.now)\n    read = models.BooleanField(default=False)",
+        "peekOfCode": "class Match(models.Model):\n    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='matches_as_user1')\n    session_1 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='matches_as_session1', null=True)\n    user_2 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='matches_as_user2')\n    session_2 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='matches_as_session2', null=True)\n    created_at = models.DateTimeField(default=timezone.now)\n    class Meta:\n        unique_together = ('user_1', 'session_1', 'user_2', 'session_2')\nclass Message(models.Model):\n    match = models.ForeignKey(Match, on_delete=models.CASCADE)",
         "detail": "w84u.models",
         "documentation": {}
     },
@@ -1444,7 +2373,16 @@
         "kind": 6,
         "importPath": "w84u.models",
         "description": "w84u.models",
-        "peekOfCode": "class Message(models.Model):\n    match = models.ForeignKey(Match, on_delete=models.CASCADE)\n    sender = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    content = models.TextField()\n    timestamp = models.DateTimeField(default=timezone.now)\n    read = models.BooleanField(default=False)\nclass Session(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    red_marker = models.OneToOneField(Marker, related_name='red_marker_session', on_delete=models.CASCADE, null=True, blank=True)\n    blue_marker = models.OneToOneField(Marker, related_name='blue_marker_session', on_delete=models.CASCADE, null=True, blank=True)",
+        "peekOfCode": "class Message(models.Model):\n    match = models.ForeignKey(Match, on_delete=models.CASCADE)\n    sender = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    content = models.TextField()\n    timestamp = models.DateTimeField(default=timezone.now)\n    read = models.BooleanField(default=False)\nclass MaybeMatch(models.Model):\n    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='maybe_matсhes_as_user_1')#тот , кого ищет пользователь\n    session_1 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='maybe_matches_as_session1')#сессия пользователя , в которой ищут первого юзера\n    id_confirmed_by_user1 = models.BooleanField(default=False)",
+        "detail": "w84u.models",
+        "documentation": {}
+    },
+    {
+        "label": "MaybeMatch",
+        "kind": 6,
+        "importPath": "w84u.models",
+        "description": "w84u.models",
+        "peekOfCode": "class MaybeMatch(models.Model):\n    user_1 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='maybe_matсhes_as_user_1')#тот , кого ищет пользователь\n    session_1 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='maybe_matches_as_session1')#сессия пользователя , в которой ищут первого юзера\n    id_confirmed_by_user1 = models.BooleanField(default=False)\n    user_2 = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='maybe_matches_as_user2')#пользователь\n    session_2 = models.ForeignKey('Session', on_delete=models.CASCADE, related_name='maybe_matches_as_session2')\n    id_confirmed_by_user2 = models.BooleanField(default=False)\n    def is_fully_confirmed(self):\n        return self.is_confirmed_by_user1 and self.is_confirmed_by_user2\nclass Session(models.Model):",
         "detail": "w84u.models",
         "documentation": {}
     },
@@ -1453,7 +2391,7 @@
         "kind": 6,
         "importPath": "w84u.models",
         "description": "w84u.models",
-        "peekOfCode": "class Session(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    red_marker = models.OneToOneField(Marker, related_name='red_marker_session', on_delete=models.CASCADE, null=True, blank=True)\n    blue_marker = models.OneToOneField(Marker, related_name='blue_marker_session', on_delete=models.CASCADE, null=True, blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)",
+        "peekOfCode": "class Session(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    red_marker = models.OneToOneField(Marker, related_name='red_marker_session', on_delete=models.CASCADE, null=True,\n                                      blank=True)\n    blue_marker = models.OneToOneField(Marker, related_name='blue_marker_session', on_delete=models.CASCADE, null=True,\n                                       blank=True)\n    name = models.CharField(max_length=100, null=True, blank=True)\n    gender = models.CharField(max_length=10, choices=(('men', 'Men'), ('women', 'Women')))\n    date = models.DateTimeField(null=True, blank=True)\n    datetime_range = DateTimeRangeField(null=True, blank=True)",
         "detail": "w84u.models",
         "documentation": {}
     },
@@ -1462,7 +2400,16 @@
         "kind": 6,
         "importPath": "w84u.serializers",
         "description": "w84u.serializers",
-        "peekOfCode": "class CustomUserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CustomUser\n        fields = '__all__'\nclass MarkerSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marker\n        fields = '__all__'\nclass MarkerHistorySerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class CustomUserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CustomUser\n        fields = '__all__'\nclass OptionalInfoSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = OptionalInfo\n        fields = '__all__'\nclass MarkerSerializer(serializers.ModelSerializer):\n    location = serializers.SerializerMethodField()",
+        "detail": "w84u.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "OptionalInfoSerializer",
+        "kind": 6,
+        "importPath": "w84u.serializers",
+        "description": "w84u.serializers",
+        "peekOfCode": "class OptionalInfoSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = OptionalInfo\n        fields = '__all__'\nclass MarkerSerializer(serializers.ModelSerializer):\n    location = serializers.SerializerMethodField()\n    class Meta:\n        model = Marker\n        fields = ['id', 'user', 'location', 'type', 'created_at']\n    def get_location(self, obj):",
         "detail": "w84u.serializers",
         "documentation": {}
     },
@@ -1471,7 +2418,7 @@
         "kind": 6,
         "importPath": "w84u.serializers",
         "description": "w84u.serializers",
-        "peekOfCode": "class MarkerSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marker\n        fields = '__all__'\nclass MarkerHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkerHistory\n        fields = '__all__'\nclass MatchSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class MarkerSerializer(serializers.ModelSerializer):\n    location = serializers.SerializerMethodField()\n    class Meta:\n        model = Marker\n        fields = ['id', 'user', 'location', 'type', 'created_at']\n    def get_location(self, obj):\n        if obj.location:\n            return {\n                'lat': obj.location.y,\n                'lng': obj.location.x",
         "detail": "w84u.serializers",
         "documentation": {}
     },
@@ -1480,16 +2427,7 @@
         "kind": 6,
         "importPath": "w84u.serializers",
         "description": "w84u.serializers",
-        "peekOfCode": "class MarkerHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkerHistory\n        fields = '__all__'\nclass MatchSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = '__all__'\nclass MessageSerializer(serializers.ModelSerializer):\n    class Meta:",
-        "detail": "w84u.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "MatchSerializer",
-        "kind": 6,
-        "importPath": "w84u.serializers",
-        "description": "w84u.serializers",
-        "peekOfCode": "class MatchSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Match\n        fields = '__all__'\nclass MessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Message\n        fields = '__all__'\nclass SessionSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class MarkerHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkerHistory\n        fields = '__all__'\nclass MessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Message\n        fields = '__all__'\nclass SessionSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "w84u.serializers",
         "documentation": {}
     },
@@ -1498,7 +2436,7 @@
         "kind": 6,
         "importPath": "w84u.serializers",
         "description": "w84u.serializers",
-        "peekOfCode": "class MessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Message\n        fields = '__all__'\nclass SessionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Session\n        fields = '__all__'",
+        "peekOfCode": "class MessageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Message\n        fields = '__all__'\nclass SessionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Session\n        fields = '__all__'\nclass MaybeMatchSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "w84u.serializers",
         "documentation": {}
     },
@@ -1507,8 +2445,62 @@
         "kind": 6,
         "importPath": "w84u.serializers",
         "description": "w84u.serializers",
-        "peekOfCode": "class SessionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Session\n        fields = '__all__'",
+        "peekOfCode": "class SessionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Session\n        fields = '__all__'\nclass MaybeMatchSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MaybeMatch\n        fields = '__all__'\nclass MatchSerializer(serializers.ModelSerializer):\n    user_1 = CustomUserSerializer(read_only=True)",
         "detail": "w84u.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "MaybeMatchSerializer",
+        "kind": 6,
+        "importPath": "w84u.serializers",
+        "description": "w84u.serializers",
+        "peekOfCode": "class MaybeMatchSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MaybeMatch\n        fields = '__all__'\nclass MatchSerializer(serializers.ModelSerializer):\n    user_1 = CustomUserSerializer(read_only=True)\n    user_2 = CustomUserSerializer(read_only=True)\n    session_1 = SessionSerializer(read_only=True)\n    session_2 = SessionSerializer(read_only=True)\n    class Meta:",
+        "detail": "w84u.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "MatchSerializer",
+        "kind": 6,
+        "importPath": "w84u.serializers",
+        "description": "w84u.serializers",
+        "peekOfCode": "class MatchSerializer(serializers.ModelSerializer):\n    user_1 = CustomUserSerializer(read_only=True)\n    user_2 = CustomUserSerializer(read_only=True)\n    session_1 = SessionSerializer(read_only=True)\n    session_2 = SessionSerializer(read_only=True)\n    class Meta:\n        model = Match\n        fields = \"__all__\"",
+        "detail": "w84u.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "handle_session_save",
+        "kind": 2,
+        "importPath": "w84u.services",
+        "description": "w84u.services",
+        "peekOfCode": "def handle_session_save(sender, instance, created, **kwargs):\n    if created:\n        find_possible_matches(instance)\ndef find_possible_matches(session):\n        try:\n            exclude_session = session\n            print(exclude_session)\n            # exclude_session = Session.objects.filter(user=pk).latest('created_at')\n            blue_marker = exclude_session.blue_marker\n            red_marker = exclude_session.red_marker",
+        "detail": "w84u.services",
+        "documentation": {}
+    },
+    {
+        "label": "find_possible_matches",
+        "kind": 2,
+        "importPath": "w84u.services",
+        "description": "w84u.services",
+        "peekOfCode": "def find_possible_matches(session):\n        try:\n            exclude_session = session\n            print(exclude_session)\n            # exclude_session = Session.objects.filter(user=pk).latest('created_at')\n            blue_marker = exclude_session.blue_marker\n            red_marker = exclude_session.red_marker\n            exclude_session_name = exclude_session.name\n            exclude_session_surname = exclude_session.surname\n            print(exclude_session_name)",
+        "detail": "w84u.services",
+        "documentation": {}
+    },
+    {
+        "label": "combine_date_time",
+        "kind": 2,
+        "importPath": "w84u.timeCompare",
+        "description": "w84u.timeCompare",
+        "peekOfCode": "def combine_date_time(date_str, time_str):\n    if date_str and time_str:\n        date_part = parser.isoparse(date_str)\n        time_part = parser.isoparse(time_str)\n        return datetime.combine(date_part, time_part.time())\n    return None\ndef create_datetime_range(date_range_begin, date_range_end, time_range_begin, time_range_end):\n    start = combine_date_time(date_range_begin, time_range_begin)\n    end = combine_date_time(date_range_end, time_range_end)\n    print(\"Start datetime:\", start)",
+        "detail": "w84u.timeCompare",
+        "documentation": {}
+    },
+    {
+        "label": "create_datetime_range",
+        "kind": 2,
+        "importPath": "w84u.timeCompare",
+        "description": "w84u.timeCompare",
+        "peekOfCode": "def create_datetime_range(date_range_begin, date_range_end, time_range_begin, time_range_end):\n    start = combine_date_time(date_range_begin, time_range_begin)\n    end = combine_date_time(date_range_end, time_range_end)\n    print(\"Start datetime:\", start)\n    print(\"End datetime:\", end)\n    if start and end:\n        return DateTimeTZRange(start, end)\n    return None",
+        "detail": "w84u.timeCompare",
         "documentation": {}
     },
     {
@@ -1516,7 +2508,7 @@
         "kind": 5,
         "importPath": "w84u.urls",
         "description": "w84u.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'users' , views.CustomUserViewSet , basename='users')\nrouter.register(r'marker' , views.MarkerViewSet , basename='marker')\nrouter.register(r'markerhistory' , views.MarkerHistoryViewSet , basename='markerhistory')\nrouter.register(r'match' , views.MatchViewSet , basename='match')\nrouter.register(r'message' , views.MessageViewSet , basename='message')\nrouter.register(r'session' , views.SessionViewSet , basename='session')\nurlpatterns = [\n    path('', views.main, name='all'),\n    path('register/', views.register, name='registration'),",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'users', views.CustomUserViewSet, basename='users')\nrouter.register(r'marker', views.MarkerViewSet, basename='marker')\nrouter.register(r'markerhistory', views.MarkerHistoryViewSet, basename='markerhistory')\nrouter.register(r'maybematch', views.MaybeMatchViewSet, basename='maybematch')\nrouter.register(r'match', views.MatchViewSet, basename='match')\nrouter.register(r'message', views.MessageViewSet, basename='message')\nrouter.register(r'session', views.SessionViewSet, basename='session')\nrouter.register(r'optionalinfo', views.OptionalInfoViewSet, basename='optionalinfo')\nurlpatterns = [",
         "detail": "w84u.urls",
         "documentation": {}
     },
@@ -1525,8 +2517,107 @@
         "kind": 5,
         "importPath": "w84u.urls",
         "description": "w84u.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.main, name='all'),\n    path('register/', views.register, name='registration'),\n    path('login/', views.user_login, name='login'),\n    path('logout/', views.logout_user, name='logout'),\n    path('map/', views.map_view, name='map'),\n    path('save_locations/', views.save_locations, name='save_locations'),\n    path('api/v1/', include(router.urls)),\n    path('api/v1/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),\n   path('api/v1/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),",
+        "peekOfCode": "urlpatterns = [\n                  path('api/v1/maybematch', views.MaybeMatchAPIView.as_view(), name='maybematch'),\n                  path('api/v1/match/', views.MatchView.as_view(), name='match'),\n                  path('', views.main, name='all'),\n                  path('register/', views.register, name='registration'),\n                  path('login/', views.user_login, name='login'),\n                  path('logout/', views.logout_user, name='logout'),\n                  path('map/', views.map_view, name='map'),\n                  path('api/v1/save_locations/', views.SaveLocationsView.as_view(), name='save_locations'),\n                  path('api/v1/save_info/', views.Save_infoView.as_view(), name='save_info'),",
         "detail": "w84u.urls",
+        "documentation": {}
+    },
+    {
+        "label": "LoginAPIView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class LoginAPIView(APIView):\n    def post(self, request, *args, **kwargs):\n        email = request.data.get('email')\n        password = request.data.get('password')\n        try:\n            user = CustomUser.objects.get(email=email)\n        except CustomUser.DoesNotExist:\n            return Response({'error': 'Invalid credentials'}, status=400)\n        user = authenticate(username=user.username, password=password)\n        if user:",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutAPIView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class LogoutAPIView(APIView):\n    permission_classes = (IsAuthenticated,)\n    def post(self, request):\n        try:\n            refresh_token = request.data[\"refresh_token\"]\n            token = RefreshToken(refresh_token)\n            token.blacklist()  # Добавляет токен в черный список\n            return Response({'detail': 'Successfully logged out'}, status=205)\n        except Exception as e:\n            return Response({'detail': str(e)}, status=400)",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "Save_infoView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class Save_infoView(APIView):\n    parser_classes = (MultiPartParser, FormParser)\n    def post(self, request):\n        try:\n            # Извлечение токена из заголовка запроса\n            auth_header = request.headers.get('Authorization')\n            if auth_header:\n                token_key = auth_header.split(' ')[1]  # Предполагаем формат 'Token <token>'\n                try:\n                    token = Token.objects.get(key=token_key)",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "SaveLocationsView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class SaveLocationsView(APIView):\n    def post(self, request):\n        try:\n            data = request.data\n            red_location = data.get('myLocation')\n            blue_location = data.get('targetLocation')\n            user = request.user\n            if not user.is_authenticated:\n                return Response({\"error\": \"User not authenticated\"}, status=status.HTTP_401_UNAUTHORIZED)\n            response_data = {}",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "WorldView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class WorldView(APIView): #мусор ебаный\n    def get(self, request):\n        # Здесь можете добавить логику получения данных, которые будут возвращены\n        data = {\n            \"message\": \"Hello from Django\"\n        }\n        return Response(data, status=status.HTTP_200_OK)\nclass AccountView(APIView):  # класс загрузки данных из таблицы CustomUser\n    permission_classes = [IsAuthenticated]\n    def get(self, request):",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "AccountView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class AccountView(APIView):  # класс загрузки данных из таблицы CustomUser\n    permission_classes = [IsAuthenticated]\n    def get(self, request):\n        try:\n            info = request.user\n        except CustomUser.DoesNotExist:\n            return Response({\"detail\": \"Информация не найдена\"}, status=status.HTTP_404_NOT_FOUND)\n        serializer = CustomUserSerializer(info)\n        return Response(serializer.data, status=status.HTTP_200_OK)\nclass OptionalInfoView(APIView):",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "OptionalInfoView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class OptionalInfoView(APIView):\n    permission_classes = [IsAuthenticated]\n    def get(self, request):\n        try:\n            optional_info = OptionalInfo.objects.get(user=request.user)\n        except OptionalInfo.DoesNotExist:\n            # Создаем запись, если не найдена\n            optional_info = OptionalInfo.objects.create(user=request.user)\n        serializer = OptionalInfoSerializer(optional_info)\n        return Response(serializer.data, status=status.HTTP_200_OK)",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "TimeCompare",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class TimeCompare(View):\n    def get(self, request, pk):\n        try:\n            # Получаем последнюю сессию пользователя\n            exclude_session = Session.objects.filter(user=pk).latest('created_at')\n            print(exclude_session.date)\n            print(exclude_session.datetime_range)\n        except Session.DoesNotExist:\n            return HttpResponse('Сессия не найдена', status=404)\n        filtered = Session.objects.none()",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "GeoCompare",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class GeoCompare(View):\n    def get(self, request, pk):\n        try:\n            exclude_session = Session.objects.filter(user=pk).latest('created_at')\n            blue_marker = exclude_session.blue_marker\n            red_marker = exclude_session.red_marker\n        except Session.DoesNotExist:\n            return HttpResponse('Сессия не найдена', status=404)\n        if blue_marker and red_marker:\n            radius_km = 0.05  # 50 метров",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "MaybeMatchAPIView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class MaybeMatchAPIView(APIView):\n    permission_classes = [IsAuthenticated]\n    def get(self, request):\n        params = MaybeMatch.objects.filter(\n            (Q(id_confirmed_by_user1=False) & Q(user_1=request.user)) |\n            (Q(id_confirmed_by_user2=False) & Q(user_2=request.user))\n        )\n        count = params.count()\n        if count > 0:\n            matches_data = []",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "MatchView",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class MatchView(APIView):\n    def get(self, request):\n        maybematches = MaybeMatch.objects.filter(\n            (Q(user_1=request.user) | Q(user_2=request.user)) &\n            Q(id_confirmed_by_user1=True) &\n            Q(id_confirmed_by_user2=True)\n        )\n        if maybematches.exists():\n            for i in maybematches:\n                # Проверяем, существует ли уже такой матч",
+        "detail": "w84u.views",
         "documentation": {}
     },
     {
@@ -1534,7 +2625,16 @@
         "kind": 6,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "class CustomUserViewSet(viewsets.ModelViewSet):\n    queryset = CustomUser.objects.all()\n    serializer_class = CustomUserSerializer\n    permission_classes = [IsAdminUser ,]\nclass MarkerViewSet(viewsets.ModelViewSet):\n    queryset = Marker.objects.all()\n    serializer_class = MarkerSerializer\n    permission_classes = [IsAdminUser ,]\nclass MarkerHistoryViewSet(viewsets.ModelViewSet):\n    queryset = MarkerHistory.objects.all()",
+        "peekOfCode": "class CustomUserViewSet(viewsets.ModelViewSet):\n    queryset = CustomUser.objects.all()\n    serializer_class = CustomUserSerializer\n    # permission_classes = [IsAdminUser, ]\n    filter_backends = [DjangoFilterBackend]\n    filterset_fields = ['email']\nclass OptionalInfoViewSet(viewsets.ModelViewSet):\n    queryset = OptionalInfo.objects.all()\n    serializer_class = OptionalInfoSerializer\n    # permission_classes = [IsAdminUser, ]",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "OptionalInfoViewSet",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class OptionalInfoViewSet(viewsets.ModelViewSet):\n    queryset = OptionalInfo.objects.all()\n    serializer_class = OptionalInfoSerializer\n    # permission_classes = [IsAdminUser, ]\nclass MarkerViewSet(viewsets.ModelViewSet):\n    queryset = Marker.objects.all()\n    serializer_class = MarkerSerializer\n    # permission_classes = [IsAdminUser, ]\nclass MarkerHistoryViewSet(viewsets.ModelViewSet):\n    queryset = MarkerHistory.objects.all()",
         "detail": "w84u.views",
         "documentation": {}
     },
@@ -1543,7 +2643,7 @@
         "kind": 6,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "class MarkerViewSet(viewsets.ModelViewSet):\n    queryset = Marker.objects.all()\n    serializer_class = MarkerSerializer\n    permission_classes = [IsAdminUser ,]\nclass MarkerHistoryViewSet(viewsets.ModelViewSet):\n    queryset = MarkerHistory.objects.all()\n    serializer_class = MarkerHistorySerializer\n    permission_classes = [IsAdminUser ,]\nclass MatchViewSet(viewsets.ModelViewSet):\n    queryset = Match.objects.all()",
+        "peekOfCode": "class MarkerViewSet(viewsets.ModelViewSet):\n    queryset = Marker.objects.all()\n    serializer_class = MarkerSerializer\n    # permission_classes = [IsAdminUser, ]\nclass MarkerHistoryViewSet(viewsets.ModelViewSet):\n    queryset = MarkerHistory.objects.all()\n    serializer_class = MarkerHistorySerializer\n    # permission_classes = [IsAdminUser, ]\nclass MaybeMatchViewSet(viewsets.ModelViewSet):\n    queryset = MaybeMatch.objects.all()",
         "detail": "w84u.views",
         "documentation": {}
     },
@@ -1552,7 +2652,16 @@
         "kind": 6,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "class MarkerHistoryViewSet(viewsets.ModelViewSet):\n    queryset = MarkerHistory.objects.all()\n    serializer_class = MarkerHistorySerializer\n    permission_classes = [IsAdminUser ,]\nclass MatchViewSet(viewsets.ModelViewSet):\n    queryset = Match.objects.all()\n    serializer_class = MatchSerializer\n    permission_classes = [IsAdminUser ,]\nclass MessageViewSet(viewsets.ModelViewSet):\n    queryset = Message.objects.all()",
+        "peekOfCode": "class MarkerHistoryViewSet(viewsets.ModelViewSet):\n    queryset = MarkerHistory.objects.all()\n    serializer_class = MarkerHistorySerializer\n    # permission_classes = [IsAdminUser, ]\nclass MaybeMatchViewSet(viewsets.ModelViewSet):\n    queryset = MaybeMatch.objects.all()\n    serializer_class = MaybeMatchSerializer\nclass MatchViewSet(viewsets.ModelViewSet):\n    queryset = Match.objects.all()\n    serializer_class = MatchSerializer",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
+        "label": "MaybeMatchViewSet",
+        "kind": 6,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "class MaybeMatchViewSet(viewsets.ModelViewSet):\n    queryset = MaybeMatch.objects.all()\n    serializer_class = MaybeMatchSerializer\nclass MatchViewSet(viewsets.ModelViewSet):\n    queryset = Match.objects.all()\n    serializer_class = MatchSerializer\n#     # permission_classes = [IsAdminUser, ]\nclass MessageViewSet(viewsets.ModelViewSet):\n    queryset = Message.objects.all()\n    serializer_class = MessageSerializer",
         "detail": "w84u.views",
         "documentation": {}
     },
@@ -1561,7 +2670,7 @@
         "kind": 6,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "class MatchViewSet(viewsets.ModelViewSet):\n    queryset = Match.objects.all()\n    serializer_class = MatchSerializer\n    permission_classes = [IsAdminUser ,]\nclass MessageViewSet(viewsets.ModelViewSet):\n    queryset = Message.objects.all()\n    serializer_class = MessageSerializer\n    permission_classes = [IsAdminUser ,]\nclass SessionViewSet(viewsets.ModelViewSet):\n    queryset = Session.objects.all()",
+        "peekOfCode": "class MatchViewSet(viewsets.ModelViewSet):\n    queryset = Match.objects.all()\n    serializer_class = MatchSerializer\n#     # permission_classes = [IsAdminUser, ]\nclass MessageViewSet(viewsets.ModelViewSet):\n    queryset = Message.objects.all()\n    serializer_class = MessageSerializer\n    # permission_classes = [IsAdminUser, ]\nclass SessionViewSet(viewsets.ModelViewSet):\n    queryset = Session.objects.all()",
         "detail": "w84u.views",
         "documentation": {}
     },
@@ -1570,7 +2679,7 @@
         "kind": 6,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "class MessageViewSet(viewsets.ModelViewSet):\n    queryset = Message.objects.all()\n    serializer_class = MessageSerializer\n    permission_classes = [IsAdminUser ,]\nclass SessionViewSet(viewsets.ModelViewSet):\n    queryset = Session.objects.all()\n    serializer_class = SessionSerializer\n    permission_classes = [IsAdminUser ,]",
+        "peekOfCode": "class MessageViewSet(viewsets.ModelViewSet):\n    queryset = Message.objects.all()\n    serializer_class = MessageSerializer\n    # permission_classes = [IsAdminUser, ]\nclass SessionViewSet(viewsets.ModelViewSet):\n    queryset = Session.objects.all()\n    serializer_class = SessionSerializer\n#     permission_classes = [IsAdminUser, ]",
         "detail": "w84u.views",
         "documentation": {}
     },
@@ -1579,7 +2688,7 @@
         "kind": 6,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "class SessionViewSet(viewsets.ModelViewSet):\n    queryset = Session.objects.all()\n    serializer_class = SessionSerializer\n    permission_classes = [IsAdminUser ,]",
+        "peekOfCode": "class SessionViewSet(viewsets.ModelViewSet):\n    queryset = Session.objects.all()\n    serializer_class = SessionSerializer\n#     permission_classes = [IsAdminUser, ]",
         "detail": "w84u.views",
         "documentation": {}
     },
@@ -1602,6 +2711,15 @@
         "documentation": {}
     },
     {
+        "label": "get_user_token",
+        "kind": 2,
+        "importPath": "w84u.views",
+        "description": "w84u.views",
+        "peekOfCode": "def get_user_token(user):\n    token, created = Token.objects.get_or_create(user=user)\n    return token.key\ndef user_login(request):\n    if request.method == 'POST':\n        form = LoginForm(request.POST)\n        if form.is_valid():\n            email = form.cleaned_data['email']\n            password = form.cleaned_data['password']\n            user = CustomUser.objects.filter(email=email).first()",
+        "detail": "w84u.views",
+        "documentation": {}
+    },
+    {
         "label": "user_login",
         "kind": 2,
         "importPath": "w84u.views",
@@ -1615,7 +2733,7 @@
         "kind": 2,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "def logout_user(request):\n    logout(request)\n    return redirect('/')\ndef map_view(request):\n    return render(request, 'w84u/W4U.html', {})\n@csrf_exempt\n@require_http_methods([\"POST\"])\ndef save_locations(request):\n    if not request.user.is_authenticated:\n        return JsonResponse({\"status\": \"error\", \"msg\": \"User not authenticated\"}, status=401)",
+        "peekOfCode": "def logout_user(request):\n    logout(request)\n    return redirect('/')\ndef map_view(request):\n    return render(request, 'w84u/W4U.html', {})\nclass Save_infoView(APIView):\n    parser_classes = (MultiPartParser, FormParser)\n    def post(self, request):\n        try:\n            # Извлечение токена из заголовка запроса",
         "detail": "w84u.views",
         "documentation": {}
     },
@@ -1624,71 +2742,8 @@
         "kind": 2,
         "importPath": "w84u.views",
         "description": "w84u.views",
-        "peekOfCode": "def map_view(request):\n    return render(request, 'w84u/W4U.html', {})\n@csrf_exempt\n@require_http_methods([\"POST\"])\ndef save_locations(request):\n    if not request.user.is_authenticated:\n        return JsonResponse({\"status\": \"error\", \"msg\": \"User not authenticated\"}, status=401)\n    try:\n        data = json.loads(request.body)\n        red_location = data.get('red')",
+        "peekOfCode": "def map_view(request):\n    return render(request, 'w84u/W4U.html', {})\nclass Save_infoView(APIView):\n    parser_classes = (MultiPartParser, FormParser)\n    def post(self, request):\n        try:\n            # Извлечение токена из заголовка запроса\n            auth_header = request.headers.get('Authorization')\n            if auth_header:\n                token_key = auth_header.split(' ')[1]  # Предполагаем формат 'Token <token>'",
         "detail": "w84u.views",
-        "documentation": {}
-    },
-    {
-        "label": "save_locations",
-        "kind": 2,
-        "importPath": "w84u.views",
-        "description": "w84u.views",
-        "peekOfCode": "def save_locations(request):\n    if not request.user.is_authenticated:\n        return JsonResponse({\"status\": \"error\", \"msg\": \"User not authenticated\"}, status=401)\n    try:\n        data = json.loads(request.body)\n        red_location = data.get('red')\n        blue_location = data.get('blue')\n        location_data = []\n        if red_location:\n            location_data.append({",
-        "detail": "w84u.views",
-        "documentation": {}
-    },
-    {
-        "label": "save_locations_to_db",
-        "kind": 2,
-        "importPath": "w84u.views",
-        "description": "w84u.views",
-        "peekOfCode": "def save_locations_to_db(location_data, user):\n    \"\"\"\n    Функция для добавления местоположений в базу данных.\n    \"\"\"\n    for data in location_data:\n        try:\n            print(f\"Сохранение местоположения: {data}\")\n            location = Marker(\n                user=user,\n                latitude=data['latitude'],",
-        "detail": "w84u.views",
-        "documentation": {}
-    },
-    {
-        "label": "Comparator",
-        "kind": 6,
-        "importPath": "Comparator",
-        "description": "Comparator",
-        "peekOfCode": "class Comparator:\n    def __init__(self, max_distance=50, text_threshold=0.8):\n        self.photo_threshold = photo_threshold\n        self.text_threshold = text_threshold\n        self.max_distance = max_distance\n        self.similarity_pipeline = pipeline(\"feature-extraction\",\n                                            model=\"sentence-transformers/paraphrase-xlm-r-multilingual-v1\")\n    # Формула Хаверсина для координат\n    def haversine(self, coord1, coord2):\n        # Коорды в градусах",
-        "detail": "Comparator",
-        "documentation": {}
-    },
-    {
-        "label": "desc1",
-        "kind": 5,
-        "importPath": "Comparator",
-        "description": "Comparator",
-        "peekOfCode": "desc1 = \"Брюнетка, хожу с каре, родинка на подбородке\"\ndesc2 = \"Видел девушку с каре, брюнетку и с родинкой на подборобке\"\nprint(\"Описание девушки: \",desc1,\"\\n\",\"Описание девушки парнем: \",desc2,\"\\n\",\"Совпадение по описанию:\", comparator.is_match_by_description(desc1, desc2),\"\\n\")\ndesc2 = \"Видел девушку блондинку с длинными волосами и голубыми глазами\"\nprint(\"Описание девушки: \",desc1,\"\\n\",\"Описание девушки парнем: \",desc2,\"\\n\",\"Совпадение по описанию:\", comparator.is_match_by_description(desc1, desc2))\ndescriptions = [\n    # Пример 1\n    {\n        \"desc1\": \"Высокий парень с короткими светлыми волосами и зелеными глазами. Носит очки и часто улыбается.\",\n        \"desc2\": \"Видела высокого парня со светлыми волосами и зелеными глазами. Он был в очках и много улыбался.\",",
-        "detail": "Comparator",
-        "documentation": {}
-    },
-    {
-        "label": "desc2",
-        "kind": 5,
-        "importPath": "Comparator",
-        "description": "Comparator",
-        "peekOfCode": "desc2 = \"Видел девушку с каре, брюнетку и с родинкой на подборобке\"\nprint(\"Описание девушки: \",desc1,\"\\n\",\"Описание девушки парнем: \",desc2,\"\\n\",\"Совпадение по описанию:\", comparator.is_match_by_description(desc1, desc2),\"\\n\")\ndesc2 = \"Видел девушку блондинку с длинными волосами и голубыми глазами\"\nprint(\"Описание девушки: \",desc1,\"\\n\",\"Описание девушки парнем: \",desc2,\"\\n\",\"Совпадение по описанию:\", comparator.is_match_by_description(desc1, desc2))\ndescriptions = [\n    # Пример 1\n    {\n        \"desc1\": \"Высокий парень с короткими светлыми волосами и зелеными глазами. Носит очки и часто улыбается.\",\n        \"desc2\": \"Видела высокого парня со светлыми волосами и зелеными глазами. Он был в очках и много улыбался.\",\n    },",
-        "detail": "Comparator",
-        "documentation": {}
-    },
-    {
-        "label": "desc2",
-        "kind": 5,
-        "importPath": "Comparator",
-        "description": "Comparator",
-        "peekOfCode": "desc2 = \"Видел девушку блондинку с длинными волосами и голубыми глазами\"\nprint(\"Описание девушки: \",desc1,\"\\n\",\"Описание девушки парнем: \",desc2,\"\\n\",\"Совпадение по описанию:\", comparator.is_match_by_description(desc1, desc2))\ndescriptions = [\n    # Пример 1\n    {\n        \"desc1\": \"Высокий парень с короткими светлыми волосами и зелеными глазами. Носит очки и часто улыбается.\",\n        \"desc2\": \"Видела высокого парня со светлыми волосами и зелеными глазами. Он был в очках и много улыбался.\",\n    },\n    # Пример 2\n    {",
-        "detail": "Comparator",
-        "documentation": {}
-    },
-    {
-        "label": "descriptions",
-        "kind": 5,
-        "importPath": "Comparator",
-        "description": "Comparator",
-        "peekOfCode": "descriptions = [\n    # Пример 1\n    {\n        \"desc1\": \"Высокий парень с короткими светлыми волосами и зелеными глазами. Носит очки и часто улыбается.\",\n        \"desc2\": \"Видела высокого парня со светлыми волосами и зелеными глазами. Он был в очках и много улыбался.\",\n    },\n    # Пример 2\n    {\n        \"desc1\": \"Невысокая девушка с длинными каштановыми волосами и карими глазами. На ней было платье в цветочек.\",\n        \"desc2\": \"Невысокая девушка с длинными каштановыми волосами и карими глазами. Была в платье с цветочным принтом.\",",
-        "detail": "Comparator",
         "documentation": {}
     },
     {

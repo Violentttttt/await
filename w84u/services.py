@@ -1,8 +1,11 @@
+import traceback
+
+from django.db.backends.postgresql.psycopg_any import DateTimeTZRange
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db import connection
 from .Comparator import create_maybematch
-from .models import Session, MaybeMatch, OptionalInfo, CustomUser , MaybeMatch
+from .models import Session, MaybeMatch, OptionalInfo, CustomUser, MaybeMatch
 from django.http import HttpResponse
 from django.contrib.gis.geos import GEOSGeometry
 from django.db.models import Q, F
@@ -10,13 +13,16 @@ from psycopg2.extras import DateTimeRange
 from django.utils.dateparse import parse_datetime
 from django.contrib.gis.measure import D
 from django.contrib.gis.db.models.functions import Distance
+
+
 @receiver(post_save, sender=Session)
 def handle_session_save(sender, instance, created, **kwargs):
     if created:
         find_possible_matches(instance)
 
-def find_possible_matches(session):
 
+def find_possible_matches(session):
+    try:
         try:
             exclude_session = session
             print(exclude_session)
@@ -55,12 +61,18 @@ def find_possible_matches(session):
         if exclude_session.date is not None:
             filtered_by_datetime = filtered_sessions_geo.filter(
                 Q(datetime_range__contains=exclude_session.date) | Q(date=exclude_session.date))
-        elif exclude_session.datetime_range is not None:
-            start_datetime = exclude_session.datetime_range.lower  # Начало диапазона
-            end_datetime = exclude_session.datetime_range.upper  # Конец диапазона
-            filtered_by_datetime = filtered_sessions_geo.filter(
-                Q(datetime_range__overlap=exclude_session.datetime_range) | Q(date__range=(start_datetime, end_datetime)))
 
+
+        elif exclude_session.datetime_range is not None:
+
+            start_datetime = exclude_session.datetime_range.lower  # Начало диапазона
+
+            end_datetime = exclude_session.datetime_range.upper  # Конец диапазона
+
+            filtered_by_datetime = filtered_sessions_geo.filter(
+
+                Q(datetime_range__overlap=exclude_session.datetime_range) | Q(
+                    date__range=(start_datetime, end_datetime)))
 
         if exclude_session_name is not '':
             filtered_by_datetime = filtered_by_datetime.filter(name=real_name)
@@ -71,13 +83,14 @@ def find_possible_matches(session):
             print('я прогнал по фамилиям')
 
         filtered_sessions = filtered_by_datetime.filter(
-            gender=exclude_session.user.gender
-            # is_active=True
+            gender=exclude_session.user.gender,
+            is_active=True
         ).exclude(pk=exclude_session.pk)
         print(filtered_sessions)
 
         for i in filtered_sessions:
-            if exclude_session.user.id != i.user.id :
+            if exclude_session.user.id != i.user.id:
                 print(f'Создание MaybeMatch между {exclude_session.user} и {i.user}')
-                create_maybematch(exclude_session.user, exclude_session, i.user , i)
-
+                create_maybematch(exclude_session.user, exclude_session, i.user, i)
+    except:
+        traceback.print_exc()  #
